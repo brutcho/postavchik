@@ -2,6 +2,8 @@
 <head>
     <title></title>
     <link rel="stylesheet" href="style.css"/>
+    <script src="./jquery.js"></script>
+    <script src="./main.js"></script>
 </head>
 <body>
     <header class="bg bg--header">
@@ -29,7 +31,7 @@
                 <p class="text--size-24 text--light p-12">От эксперта №1 по госзакупкам
                 <span class="text--bold">Валерия Овечкина</span></p>
                 <p class="text--size-16 text--condensed p-42">Екатеринбург, ул. Бориса Ельцина, 8 Отель «Hyatt»</p>
-                <button class="btn">оставить заявку</button>
+                <button class="btn js-feedback__popup">оставить заявку</button>
             </div>
         </div>
     </section>
@@ -44,6 +46,7 @@
     </section>
     <section class="block-3  bg bg--block-3">
         <div class="section">
+            <img src="img/image1.png" alt=""/>
             <div class="pre-col-2">
                 <p class="text__header">СПИКЕР КУРСА<br/>
                 <span class="text--size-40 text--bold text--orange">ВАЛЕРИЙ ОВЕЧКИН</span></p>
@@ -73,7 +76,7 @@
             <p class="text__description">Тема доклада:<br/>
             <span class="text--bold">«Субподряд через доверие!<br/>
             Как увеличить рынок с 4 до 20 трлн!»</span></p>
-            <button class="btn btn--transparent">ПРОЙТИ ИНТЕНСИВ</button>
+            <button class="btn btn--transparent  js-feedback__popup">ПРОЙТИ ИНТЕНСИВ</button>
         </div>
     </section>
     <section class="block-6  bg bg--block-6">
@@ -83,7 +86,7 @@
                 В ИНТЕНСИВЕ «ПОСТАВЩИК»!</p>
             </div>
             <div class="section__phone text--regular text--orange col pre-col-4">
-                <button class="btn">заполнить анкету</button>
+                <button class="btn  js-feedback__popup">заполнить анкету</button>
             </div>
         </div>
     </section>
@@ -136,13 +139,13 @@
         </div>
         <div class="section third">
             <div class="col col-1 p-0 second">
-                <button class="btn btn--transparent">ПРОЙТИ ИНТЕНСИВ</button>
+                <button class="btn btn--transparent  js-feedback__popup">ПРОЙТИ ИНТЕНСИВ</button>
             </div>
             <div class="col col-mid ">
-                <button  class="btn btn--transparent">ПРОЙТИ ИНТЕНСИВ</button>
+                <button  class="btn btn--transparent  js-feedback__popup">ПРОЙТИ ИНТЕНСИВ</button>
             </div>
             <div class="col col-4">
-                <button  class="btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                <button  class="btn  js-feedback__popup">ОСТАВИТЬ ЗАЯВКУ</button>
             </div>
         </div>
     </section>
@@ -196,7 +199,7 @@
             <p class="col col-1 text--center text--bold">КОЛИЧЕСТВО МЕСТ<br/> ОГРАНИЧЕНО!</p>
             <p class="col col-mid text--center">Спешите принять<br/> участие в интенсиве!</p>
             <p class="col col-4">
-                <button class="btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                <a href="#feedback" class="btn">ОСТАВИТЬ ЗАЯВКУ</a>
             </p>
             
         </div>
@@ -207,7 +210,7 @@
         </div>
     </section>
     <section class="block-11  bg bg--block-11">
-        <div class="section">
+        <div class="section" id="feedback">
             <div class="col col-half">
                 <div class="form__text">
                     <p class="text__header text--bold">ПРИ ОФОРМЛЕНИИ ЗАЯВКИ<br/> ВЫ ПОЛУЧАЕТЕ В ПОДАРОК:</p>
@@ -238,13 +241,13 @@
                         <input name="email"   type="text" placeholder="Электропочта" />
                     </form>
                     <div class="form__radio">
-                        <label><input type="radio" name="item"/>Живое участие</label>
-                        <label><input type="radio" name="item"/>Онлайн (бесплатно)</label>
-                        <label><input type="radio" name="item"/>Я согласен/a на обработку персональных данных</label>
-                        <label><input type="radio" name="item"/>Я согласен/a на получение писем</label>
+                        <label><input type="radio" name="item"/> Живое участие</label>
+                        <label><input type="radio" name="item"/> Онлайн (бесплатно)</label>
+                        <label><input type="radio" name="item"/> Я согласен/a на обработку персональных данных</label> 
+                        <label><input type="radio" name="item"/> Я согласен/a на получение писем</label>
                     </div>
                     <div class="form__submit">
-                        <button class="text--center btn">ОТПРАВИТЬ ЗАЯВКУ</button>
+                        <button class="text--center btn  js-feedback__popup">ОТПРАВИТЬ ЗАЯВКУ</button>
                     </div>
                 </div>
             </div>

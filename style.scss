@@ -1,4 +1,9 @@
-﻿@import url(./fnt/DINNextCYR-Bold.otf);
+﻿$portrait: "screen and (orientation: portrait)";
+$mobile: "all and (max-width: 50em)";
+$desktop: "all and (min-width: 50em) ";
+$mini: "all and (max-width: 30em) ";
+
+@import url(./fnt/DINNextCYR-Bold.otf);
 @font-face {
   font-family: 'DINNextCYR-Bold';
   src:  url('./fnt/DINNextCYR-Bold.otf');
@@ -201,8 +206,7 @@ h1 {
     // background: rgba(100,100,10,0.5);
 }
 .col-end-1 {
-    width: 385px;
-    padding-right: 95px;
+    width: 480px;
     // background: rgba(100,100,10,0.5);
 }
 .col-end-2 {
@@ -321,6 +325,9 @@ h1 {
         height: 60px;
         line-height: 60px;
         border-radius: 30px;
+    }
+    .pre-col-4 {
+        padding-top: 5px;
     }
     height: 120px;
     // background: rgba(100,100,10,0.5);
@@ -441,6 +448,9 @@ h1 {
     // background: rgba(100,10,10,0.5);
     .section {
         padding-top: 70px;
+        @media #{$mobile} {
+            padding-top: 70px;
+        }
         .text__header {
             text-align: center;
             color: #fff;
@@ -450,6 +460,9 @@ h1 {
             text-align: center;
             font-size: 36px;
             margin-bottom: 50px;
+            @media #{$mobile} {
+                margin-bottom: 30px;
+            }
         }
         .table {
             ul {
@@ -462,6 +475,18 @@ h1 {
                 border: none;
                 border-collapse: collapse;
                 margin-bottom: 100px;
+                position: relative;
+                &:after {
+                    display: block;
+                    content: " ";
+                    width: 68px;
+                    margin-left: -34px;
+                    left: 50%;
+                    height: 20px;
+                    position: absolute;
+                    bottom: -62px;
+                    background: url(img/dotted.png) no-repeat bottom center;
+                }
                 td {
                     vertical-align: middle;
                     &.col-1 {
@@ -475,6 +500,9 @@ h1 {
                     }
                     &.col-mid {
                         padding: 28px 0 18px 0;
+                        @media #{$mobile} {
+                            padding: 22px 0 14px 0;
+                        }
                         color: #fff;
                         width: 460px;
                         font-size: 14px;
@@ -577,6 +605,9 @@ h1 {
         li {
             list-style: none;
             padding: 20px 0px;
+            @media #{$mobile} {
+                padding: 10px 0px 30px 0;
+            }
             color: #333;
         }
     }
@@ -639,6 +670,7 @@ footer {
     color: #333;
     transition: all 0.1s ease-out 0.1s;
     cursor: pointer;
+    outline: none;
     &:hover {
         background: #fabe69;
         color: #fff;
@@ -658,6 +690,18 @@ footer {
     }
 }
 
+.js-popup__bg{position:absolute;display:none;position:fixed;width:100%;height:100%;background:rgba(0,0,0,0.7);content:' ';top:0;left:0;z-index:1000003;}
+.js-popup__window{position:absolute;top:50%;left:50%;margin-left:-240px;margin-top:-140px;width:400px;height:340px;background:rgba(242, 226, 192, 0.3);border-radius:2px;padding:15px; box-shadow: 1px 2px 10px #111;}
+.js-popup__window input[type=text]{height:44px;width:98%;border-radius:1px;border:none;margin-bottom:10px;font-family:'PT Sans';padding-left:10px; box-shadow: inset 0 10px 5px #ccc;}
+.js-popup__window textarea{resize:none;height:67px;width:98%;border-radius:5px;border:none;margin-bottom:10px;font-family:'PT Sans';padding-left:10px;padding-top:7px; box-shadow: inset 0 10px 5px #ccc;}
+.js-popup__window h3{font-size:18px;font-weight:300;color:#111;margin:0px 0 15px 0; text-transform: uppercase;}
+.js-popup__window p{color:#fff;font-size:18px;}
+.js-popup__close{position:absolute;right:10px;top:10px;width:22px;height:22px;display:block;border-radius:10px;background:#f2f2f2;cursor:pointer;color:#ff6600;border:none;font-weight:bold;}
+.js-popup__error {
+    line-height: 5px;
+    font-size: 12px !important;
+    color: #991E22 !important;
+}
 
 
 
