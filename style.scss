@@ -524,11 +524,15 @@ h1 {
             }
         }
         &.second {
+            @media #{$mobile} {
+                margin-top: -40px;
+            }
             padding-top: 5px;
             height: 134px;
             .col-1 {
                 color: #fff;
                 font-size: 30px;
+
             }
             .col-mid {
                 padding-top: 10px;
