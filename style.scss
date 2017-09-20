@@ -524,8 +524,8 @@ h1 {
             }
         }
         &.second {
+            margin-top: -40px;
             @media #{$mobile} {
-                margin-top: -40px;
             }
             padding-top: 5px;
             height: 134px;
